@@ -1,35 +1,17 @@
-import { useState } from 'react';
+import { ITarefa } from '../../types/tarefa';
 import Item from './Item';
 import style from './List.module.scss';
 
-function List() {
-  const [ tarefas, setTarefas ] = useState([
-    {
-      id: 1,
-      conteudo: "React",
-      tempo: "02:00:00",
-    },
-    {
-      id: 2,
-      conteudo: "Laravel",
-      tempo: "01:20:00",
-    },
-    {
-      id: 3,
-      conteudo: "Typescript",
-      tempo: "03:00:00",
-    },
-  ]);
 
+
+function List({ tarefas }: { tarefas: ITarefa[]}) {
   return (
     <aside className={style.listaTarefas}>
-      <h2 onClick={() => {
-        setTarefas([...tarefas, { id: 4, conteudo: "PHP", tempo: "02:00:00"}]);
-      }}>Estudos do dia</h2>
+      <h2>Estudos do dia</h2>
       <ul>
         {tarefas.map((tarefa) => (
           <Item
-          key={tarefa.id}
+          key={Math.random()}
           //usando o destructuring novamente, spread operator
           //indicamos que vamos usar todas as prorpiedades do objeto tarefa
           //não indicado caso estejamos trabalhando com objetos grandes ou 
