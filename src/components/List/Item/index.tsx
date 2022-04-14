@@ -1,5 +1,5 @@
 import { ITarefa } from "../../../types/tarefa";
-import style from "../List.module.scss";
+import style from "./Item.module.scss";
 
 interface Props extends ITarefa {
   selecionaTarefa: (tarefaSelecionada: ITarefa) => void;
@@ -15,7 +15,6 @@ function Item({
   id,
   selecionaTarefa,
 }: Props) {
-  
   return (
     <li
     //se selecionado for true adiciona o css de itemSelecionado 
