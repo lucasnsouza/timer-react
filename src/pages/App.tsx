@@ -19,7 +19,7 @@ function App() {
       ...tarefa,
       //iterar sobe todas as tarefas, daí se a tarefa da iteração tiver o mesmo id da tarefa selecionada
       //retorna a propriedade selecionado como true
-      selecionado: tarefa.id == tarefaSelecionada.id ? true : false
+      selecionado: tarefa.id === tarefaSelecionada.id ? true : false
     })));
   }
 
