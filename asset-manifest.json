@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/timer-react/static/css/main.b04247bc.css",
+    "main.js": "/timer-react/static/js/main.65118ac2.js",
+    "static/media/check-mark.svg": "/timer-react/static/media/check-mark.53f24c0a28e150404896.svg",
+    "index.html": "/timer-react/index.html",
+    "main.b04247bc.css.map": "/timer-react/static/css/main.b04247bc.css.map",
+    "main.65118ac2.js.map": "/timer-react/static/js/main.65118ac2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b04247bc.css",
+    "static/js/main.65118ac2.js"
+  ]
+}
