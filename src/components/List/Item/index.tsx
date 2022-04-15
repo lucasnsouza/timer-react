@@ -17,9 +17,16 @@ function Item({
 }: Props) {
   return (
     <li
-    //se selecionado for true adiciona o css de itemSelecionado 
-      className={`${style.item} ${selecionado ? style.itemSelecionado : ''}`}
+      //se selecionado for true adiciona o css de itemSelecionado e de itemCompletado
+      className={`
+      ${style.item} 
+      ${selecionado ? style.itemSelecionado : ""}
+      ${completado ? style.itemCompletado : ""}
+      `}
       onClick={() =>
+        //usammos a mesma renderização condicional
+        //podemos ler que só vai executar o onclick se completado for false
+        !completado &&
         selecionaTarefa({
           conteudo,
           tempo,
@@ -31,6 +38,10 @@ function Item({
     >
       <h3>{conteudo}</h3>
       <span>{tempo}</span>
+      {/* renderização condicional */}
+      {completado && (
+        <span className={style.concluido} aria-label="tarefa-completada"></span>
+      )}
     </li>
   );
 }
